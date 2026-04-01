@@ -3,17 +3,40 @@
 ## Purpose
 This project aims to refactor the Linux kernel's TCG OPAL (Self-Encrypting Drive) implementation into a generic, OS-agnostic C library capable of running on embedded RTOS environments, specifically FreeRTOS. Instead of rewriting the complex OPAL state machine and packet generation logic from scratch, we leverage the battle-tested linux kernel source and strip away its OS-specific dependencies.
 
-## Key Implementation Steps
-1. **Source Fetching**: Brought in `sed-opal.c` and related headers from the Linux kernel tree.
-2. **Automated Decoupling (Phase 1)**: Created `strip_linux_final.py` to procedurally parse `sed-opal.c`, removing Linux specific subsets like the block layer IOCTLs, Suspend/Resume power states, Module `__init` macros, and the internal Keyring configuration. 
-3. **Compatibility Layer (Phase 2 & 3)**: Developed `linux_xcompat.h` to alias heavy Linux macros (`kmalloc`, `mutex_lock`, `list_for_each_entry`, `pr_debug`) to a lightweight RTOS Abstraction Layer (`ral.h`).
-4. **RTOS Abstraction Layer (RAL)**: Implemented the backend of `ral.h` in `ral_freertos.c`, bridging memory allocations to `pvPortMalloc` and locks to FreeRTOS Semaphores.
-5. **Storage & Transport**: Stubbed a generic storage interface (`storage_if.c`, `storage_if.h`) capable of intercepting OPAL packets and sending them to an embedded controller payload logic.
+## Key Implementation Steps (Project Report narrative)
 
-## Roadblocks Faced
-* **Deep Linux Keyring Entanglement**: The Linux kernel relies heavily on a secure keys subsystem for password hashing and storage. Stripping this without breaking the `sed-opal` state machine was challenging. This was solved by precisely matching string blocks in Python to stub out `update_sed_opal_key` and remove usage lines rather than manually modifying the C code.
-* **Const Qualifier Warnings**: Mapping generic RTOS free functions (which expect `void *`) to the `kfree` macro (which can accept `const` data) resulted in compiler warnings. This was resolved with a robust casting macro.
-* **Complex Data Types**: Migrating from strictly typed kernel structures (`__u8`, `__be32`) required careful regex logic to remap everything to `<stdint.h>` types while ensuring endian-swapping macros (`cpu_to_be32`) still functioned properly via the RAL.
+The translation of the Linux Kernel's TCG OPAL implementation into an RTOS context was performed through a phased, highly-automated decoupling strategy:
+
+### Phase 1: Source Acquisition and Automated Decoupling
+Rather than attempting a massive, manual fork of `sed-opal.c` (approx 3,300 lines of highly specific kernel driver code), the methodology utilized a continuous integration-friendly approach. The raw, untouched `sed-opal.c`, `uapi_sed-opal.h`, and `linux_sed-opal.h` files were pulled into the workspace. A procedural python pipeline (`strip_linux_final.py`) was engineered to systematically strip unneeded Linux subsystems.
+*   **Targeted Pruning**: The script identified and wiped out the Linux `ioctl` infrastructure (`sed_ioctl`), power management hooks (`opal_unlock_from_suspend`), and module instantiation logic (`late_initcall`). 
+*   **Regex Stripping**: The Python pipeline used a combination of literal substring bounds and regex substitutions to slice out unsupported kernel dependencies cleanly, ensuring the core algorithmic structure—particularly the `opal_dev` state machine—was completely retained.
+
+### Phase 2: Building the Cross-Compatibility Header
+It was identified that manually re-writing every instance of a kernel-specific macro throughout `opal.c` would make merging upstream kernel patches in the future prohibitively difficult. To resolve this, `linux_xcompat.h` was written. 
+*   This header acts as an impedance matcher between Kernel C syntax and standard C11. Calls to standard kernel idioms like `kmalloc`, `list_for_each_entry`, `mutex_lock`, and logging utilities like `pr_debug` were preserved in the C file but intercepted via `#define` macros inside `linux_xcompat.h`.
+*   Crucially, this layer mapped Kernel data types (`__u8`, `__be32`, `u16`) across to standardized `<stdint.h>` formats, guaranteeing compatibility on strictly-typed embedded compiler toolchains.
+
+### Phase 3: The RTOS Abstraction Layer (RAL) Implementation
+Behind `linux_xcompat.h`, a formal API was required to hook into the actual embedded OS. This was formalized as the RTOS Abstraction Layer in `ral.h`.
+*   A specific backend, `ral_freertos.c`, was developed mapped against the FreeRTOS API. This translates `ral_malloc` into FreeRTOS's thread-safe memory manager (`pvPortMalloc`) and dynamically initiates `SemaphoreHandle_t` objects to replace `mutex` logic. 
+
+### Phase 4: Storage Interface Mocking
+Linux inherently handles sending the OPAL security payloads to the physical drives via its block layer and `request_queue` structs. We implemented a stub replacement named `storage_if.c`. This interface catches raw payload tokens generated by the newly freed `opal.c` logic and provides explicit endpoints for an embedded system designer to pipe to an NVMe or SATA hardware abstraction layer.
+
+## Roadblocks Faced & Solutions
+
+### Entanglements with the Linux Keyring Subsystem
+**The Problem**: A major structural roadblock emerged during Phase 1 where the core OPAL engine was hopelessly entangled with the Linux internal `keyring` (a kernel utility for managing cryptography tokens and credentials). The FreeRTOS target possesses no analogous structure out of the box. 
+**The Solution**: Because the keyring logic is tightly woven into `opal_set_new_pw` and `update_sed_opal_key`, automated removal was tricky. Regex strategies were over-capturing valid syntax. We ultimately resolved this by hard-slicing strings using explicit block indices within `strip_linux_final.py`, and systematically deleting multi-line usages of `update_sed_opal_key(OPAL_AUTH_KEY, ...)` without mutating the fundamental pointer logic of the adjacent code structures.
+
+### Generic Macro Conversion and Const-Correctness Warnings
+**The Problem**: Attempting to mock Linux's aggressive usage of dynamically formatted macros proved problematic. Specifically, mocking Linux's `kfree()` to redirect to a generic RTOS `ral_free()` function threw severe `const qualifier discarded` compiler aborts due to GCC strictness flags. Additionally, defining endian-swapping operations (`cpu_to_be32`) reliably for generic platforms created overhead.
+**The Solution**: We addressed the `const` correctness natively inside `linux_xcompat.h` by casting any arbitrary pointer arriving into `kfree` strictly to `(void*)` before traversing the `.h` boundary to the RAL. The endian issues were negated by relying on highly-optimized compiler builtins (`__builtin_bswap32`) where possible, wrapped inside agnostic fallback logic inside `ral.h`.
+
+### Simulation and Build Integrity
+**The Problem**: Testing compiling capabilities on an `x86_64` host container without dragging in an entire ARM/FreeRTOS toolchain limited iteration speed.
+**The Solution**: Dummy FreeRTOS headers (`FreeRTOS.h`, `semphr.h`, `task.h`) were scaffolded locally within the `src/` directory. These contained just enough `typedef` structure to spoof the Host GCC compiler into successfully indexing and assembling the source objects into a local test binary (`opal_test`), allowing test-driven verification of the entire decoupling pipeline instantly.
 
 ## Repository Structure & File Purposes
 
