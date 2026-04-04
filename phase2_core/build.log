@@ -1,0 +1,1003 @@
+gcc -c -o opal_core.o opal_core.c -Wall -Wno-pointer-sign -Wno-unused-function -D_DEFAULT_SOURCE -g
+In file included from opal_core.c:2:
+opal_api.h:58:9: error: unknown type name ‘uint8_t’
+   58 |         uint8_t lr;
+      |         ^~~~~~~
+opal_api.h:59:9: error: unknown type name ‘uint8_t’
+   59 |         uint8_t key_len;
+      |         ^~~~~~~
+opal_api.h:60:9: error: unknown type name ‘uint8_t’
+   60 |         uint8_t key_type;
+      |         ^~~~~~~
+opal_api.h:61:9: error: unknown type name ‘uint8_t’
+   61 |         uint8_t __align[5];
+      |         ^~~~~~~
+opal_api.h:62:9: error: unknown type name ‘uint8_t’
+   62 |         uint8_t key[OPAL_KEY_MAX];
+      |         ^~~~~~~
+opal_api.h:71:9: error: unknown type name ‘uint32_t’
+   71 |         uint32_t sum;
+      |         ^~~~~~~~
+opal_api.h:72:9: error: unknown type name ‘uint8_t’
+   72 |         uint8_t num_lrs;
+      |         ^~~~~~~
+opal_api.h:73:9: error: unknown type name ‘uint8_t’
+   73 |         uint8_t lr[OPAL_MAX_LRS];
+      |         ^~~~~~~
+opal_api.h:74:9: error: unknown type name ‘uint8_t’
+   74 |         uint8_t align[2]; /* Align to 8 byte boundary */
+      |         ^~~~~~~
+opal_api.h:78:9: error: unknown type name ‘uint32_t’
+   78 |         uint32_t sum;
+      |         ^~~~~~~~
+opal_api.h:79:9: error: unknown type name ‘uint32_t’
+   79 |         uint32_t who;
+      |         ^~~~~~~~
+opal_api.h:84:9: error: unknown type name ‘uint64_t’
+   84 |         uint64_t range_start;
+      |         ^~~~~~~~
+opal_api.h:85:9: error: unknown type name ‘uint64_t’
+   85 |         uint64_t range_length;
+      |         ^~~~~~~~
+opal_api.h:86:9: error: unknown type name ‘uint32_t’
+   86 |         uint32_t RLE; /* Read Lock enabled */
+      |         ^~~~~~~~
+opal_api.h:87:9: error: unknown type name ‘uint32_t’
+   87 |         uint32_t WLE; /* Write Lock Enabled */
+      |         ^~~~~~~~
+opal_api.h:93:9: error: unknown type name ‘uint64_t’
+   93 |         uint64_t range_start;
+      |         ^~~~~~~~
+opal_api.h:94:9: error: unknown type name ‘uint64_t’
+   94 |         uint64_t range_length;
+      |         ^~~~~~~~
+opal_api.h:95:9: error: unknown type name ‘uint32_t’
+   95 |         uint32_t RLE; /* Read Lock enabled */
+      |         ^~~~~~~~
+opal_api.h:96:9: error: unknown type name ‘uint32_t’
+   96 |         uint32_t WLE; /* Write Lock Enabled */
+      |         ^~~~~~~~
+opal_api.h:97:9: error: unknown type name ‘uint32_t’
+   97 |         uint32_t l_state;
+      |         ^~~~~~~~
+opal_api.h:98:9: error: unknown type name ‘uint8_t’
+   98 |         uint8_t  align[4];
+      |         ^~~~~~~
+opal_api.h:103:9: error: unknown type name ‘uint32_t’
+  103 |         uint32_t l_state;
+      |         ^~~~~~~~
+opal_api.h:104:9: error: unknown type name ‘uint16_t’
+  104 |         uint16_t flags;
+      |         ^~~~~~~~
+opal_api.h:105:9: error: unknown type name ‘uint8_t’
+  105 |         uint8_t __align[2];
+      |         ^~~~~~~
+opal_api.h:125:9: error: unknown type name ‘uint8_t’
+  125 |         uint8_t enable_disable;
+      |         ^~~~~~~
+opal_api.h:126:9: error: unknown type name ‘uint8_t’
+  126 |         uint8_t __align[7];
+      |         ^~~~~~~
+opal_api.h:131:9: error: unknown type name ‘uint8_t’
+  131 |         uint8_t done_flag;
+      |         ^~~~~~~
+opal_api.h:132:9: error: unknown type name ‘uint8_t’
+  132 |         uint8_t __align[7];
+      |         ^~~~~~~
+opal_api.h:137:15: error: unknown type name ‘uint64_t’
+  137 |         const uint64_t data;
+      |               ^~~~~~~~
+opal_api.h:138:9: error: unknown type name ‘uint64_t’
+  138 |         uint64_t offset;
+      |         ^~~~~~~~
+opal_api.h:139:9: error: unknown type name ‘uint64_t’
+  139 |         uint64_t size;
+      |         ^~~~~~~~
+opal_api.h:151:15: error: unknown type name ‘uint64_t’
+  151 |         const uint64_t data;
+      |               ^~~~~~~~
+opal_api.h:152:15: error: unknown type name ‘uint8_t’
+  152 |         const uint8_t table_uid[OPAL_UID_LENGTH];
+      |               ^~~~~~~
+opal_api.h:153:9: error: unknown type name ‘uint64_t’
+  153 |         uint64_t offset;
+      |         ^~~~~~~~
+opal_api.h:154:9: error: unknown type name ‘uint64_t’
+  154 |         uint64_t size;
+      |         ^~~~~~~~
+opal_api.h:157:9: error: unknown type name ‘uint64_t’
+  157 |         uint64_t flags;
+      |         ^~~~~~~~
+opal_api.h:158:9: error: unknown type name ‘uint64_t’
+  158 |         uint64_t priv;
+      |         ^~~~~~~~
+opal_api.h:170:9: error: unknown type name ‘uint32_t’
+  170 |         uint32_t flags;
+      |         ^~~~~~~~
+opal_api.h:171:9: error: unknown type name ‘uint32_t’
+  171 |         uint32_t reserved;
+      |         ^~~~~~~~
+opal_api.h:179:9: error: unknown type name ‘uint8_t’
+  179 |         uint8_t align;
+      |         ^~~~~~~
+opal_api.h:180:9: error: unknown type name ‘uint32_t’
+  180 |         uint32_t logical_block_size;
+      |         ^~~~~~~~
+opal_api.h:181:9: error: unknown type name ‘uint64_t’
+  181 |         uint64_t alignment_granularity;
+      |         ^~~~~~~~
+opal_api.h:182:9: error: unknown type name ‘uint64_t’
+  182 |         uint64_t lowest_aligned_lba;
+      |         ^~~~~~~~
+opal_api.h:183:9: error: unknown type name ‘uint8_t’
+  183 |         uint8_t  __align[3];
+      |         ^~~~~~~
+opal_api.h:187:9: error: unknown type name ‘uint64_t’
+  187 |         uint64_t data;
+      |         ^~~~~~~~
+opal_api.h:188:9: error: unknown type name ‘uint64_t’
+  188 |         uint64_t size;
+      |         ^~~~~~~~
+opal_api.h:193:9: error: unknown type name ‘uint32_t’
+  193 |         uint32_t options;
+      |         ^~~~~~~~
+opal_api.h:194:9: error: unknown type name ‘uint32_t’
+  194 |         uint32_t __pad;
+      |         ^~~~~~~~
+In file included from opal_core.c:3:
+opal_core.h:7:84: error: unknown type name ‘size_t’
+    7 | typedef int (sec_send_recv)(void *data, uint16_t spsp, uint8_t secp, void *buffer, size_t len, bool send);
+      |                                                                                    ^~~~~~
+opal_core.h:6:1: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+    5 | #include <stdint.h>
+  +++ |+#include <stddef.h>
+    6 | struct opal_dev;
+opal_core.h:9:44: error: unknown type name ‘sec_send_recv’
+    9 | struct opal_dev *init_opal_dev(void *data, sec_send_recv *send_recv);
+      |                                            ^~~~~~~~~~~~~
+In file included from opal_core.c:4:
+opal_proto.h:240:9: error: unknown type name ‘__be32’
+  240 |         __be32 reserved0;
+      |         ^~~~~~
+opal_proto.h:241:9: error: unknown type name ‘u8’
+  241 |         u8 extendedComID[4];
+      |         ^~
+opal_proto.h:242:9: error: unknown type name ‘__be32’
+  242 |         __be32 outstandingData;
+      |         ^~~~~~
+opal_proto.h:243:9: error: unknown type name ‘__be32’
+  243 |         __be32 minTransfer;
+      |         ^~~~~~
+opal_proto.h:244:9: error: unknown type name ‘__be32’
+  244 |         __be32 length;
+      |         ^~~~~~
+opal_proto.h:249:9: error: unknown type name ‘__be32’
+  249 |         __be32 tsn;
+      |         ^~~~~~
+opal_proto.h:250:9: error: unknown type name ‘__be32’
+  250 |         __be32 hsn;
+      |         ^~~~~~
+opal_proto.h:251:9: error: unknown type name ‘__be32’
+  251 |         __be32 seq_number;
+      |         ^~~~~~
+opal_proto.h:252:9: error: unknown type name ‘__be16’
+  252 |         __be16 reserved0;
+      |         ^~~~~~
+opal_proto.h:253:9: error: unknown type name ‘__be16’
+  253 |         __be16 ack_type;
+      |         ^~~~~~
+opal_proto.h:254:9: error: unknown type name ‘__be32’
+  254 |         __be32 acknowledgment;
+      |         ^~~~~~
+opal_proto.h:255:9: error: unknown type name ‘__be32’
+  255 |         __be32 length;
+      |         ^~~~~~
+opal_proto.h:260:9: error: unknown type name ‘u8’
+  260 |         u8 reserved0[6];
+      |         ^~
+opal_proto.h:261:9: error: unknown type name ‘__be16’
+  261 |         __be16 kind;
+      |         ^~~~~~
+opal_proto.h:262:9: error: unknown type name ‘__be32’
+  262 |         __be32 length;
+      |         ^~~~~~
+opal_proto.h:287:9: error: unknown type name ‘__be32’
+  287 |         __be32 length; /* the length of the header 48 in 2.00.100 */
+      |         ^~~~~~
+opal_proto.h:288:9: error: unknown type name ‘__be32’
+  288 |         __be32 revision; /**< revision of the header 1 in 2.00.100 */
+      |         ^~~~~~
+opal_proto.h:289:9: error: unknown type name ‘__be32’
+  289 |         __be32 reserved01;
+      |         ^~~~~~
+opal_proto.h:290:9: error: unknown type name ‘__be32’
+  290 |         __be32 reserved02;
+      |         ^~~~~~
+opal_proto.h:295:9: error: unknown type name ‘u8’
+  295 |         u8 ignored[32];
+      |         ^~
+opal_proto.h:317:9: error: unknown type name ‘u8’
+  317 |         u8 supported_features;
+      |         ^~
+opal_proto.h:322:9: error: unknown type name ‘u8’
+  322 |         u8 reserved01[3];
+      |         ^~
+opal_proto.h:323:9: error: unknown type name ‘__be32’
+  323 |         __be32 reserved02;
+      |         ^~~~~~
+opal_proto.h:324:9: error: unknown type name ‘__be32’
+  324 |         __be32 reserved03;
+      |         ^~~~~~
+opal_proto.h:345:9: error: unknown type name ‘u8’
+  345 |         u8 supported_features;
+      |         ^~
+opal_proto.h:350:9: error: unknown type name ‘u8’
+  350 |         u8 reserved01[3];
+      |         ^~
+opal_proto.h:351:9: error: unknown type name ‘__be32’
+  351 |         __be32 reserved02;
+      |         ^~~~~~
+opal_proto.h:352:9: error: unknown type name ‘__be32’
+  352 |         __be32 reserved03;
+      |         ^~~~~~
+opal_proto.h:366:9: error: unknown type name ‘u8’
+  366 |         u8 header[4];
+      |         ^~
+opal_proto.h:372:9: error: unknown type name ‘u8’
+  372 |         u8 reserved01;
+      |         ^~
+opal_proto.h:373:9: error: unknown type name ‘u8’
+  373 |         u8 reserved02[7];
+      |         ^~
+opal_proto.h:374:9: error: unknown type name ‘__be32’
+  374 |         __be32 logical_block_size;
+      |         ^~~~~~
+opal_proto.h:375:9: error: unknown type name ‘__be64’
+  375 |         __be64 alignment_granularity;
+      |         ^~~~~~
+opal_proto.h:376:9: error: unknown type name ‘__be64’
+  376 |         __be64 lowest_aligned_lba;
+      |         ^~~~~~
+opal_proto.h:385:9: error: unknown type name ‘__be16’
+  385 |         __be16 baseComID;
+      |         ^~~~~~
+opal_proto.h:386:9: error: unknown type name ‘__be16’
+  386 |         __be16 numComIDs;
+      |         ^~~~~~
+opal_proto.h:391:9: error: unknown type name ‘u8’
+  391 |         u8 range_crossing;
+      |         ^~
+opal_proto.h:392:9: error: unknown type name ‘u8’
+  392 |         u8 reserved01;
+      |         ^~
+opal_proto.h:393:9: error: unknown type name ‘__be16’
+  393 |         __be16 reserved02;
+      |         ^~~~~~
+opal_proto.h:394:9: error: unknown type name ‘__be32’
+  394 |         __be32 reserved03;
+      |         ^~~~~~
+opal_proto.h:395:9: error: unknown type name ‘__be32’
+  395 |         __be32 reserved04;
+      |         ^~~~~~
+opal_proto.h:404:9: error: unknown type name ‘__be16’
+  404 |         __be16 baseComID;
+      |         ^~~~~~
+opal_proto.h:405:9: error: unknown type name ‘__be16’
+  405 |         __be16 numComIDs;
+      |         ^~~~~~
+opal_proto.h:414:9: error: unknown type name ‘__be32’
+  414 |         __be32 num_locking_objects;
+      |         ^~~~~~
+opal_proto.h:421:9: error: unknown type name ‘u8’
+  421 |         u8 reserved01;
+      |         ^~
+opal_proto.h:422:9: error: unknown type name ‘u8’
+  422 |         u8 reserved02;
+      |         ^~
+opal_proto.h:423:9: error: unknown type name ‘__be16’
+  423 |         __be16 reserved03;
+      |         ^~~~~~
+opal_proto.h:424:9: error: unknown type name ‘__be32’
+  424 |         __be32 reserved04;
+      |         ^~~~~~
+opal_proto.h:433:9: error: unknown type name ‘__be16’
+  433 |         __be16 reserved01;
+      |         ^~~~~~
+opal_proto.h:434:9: error: unknown type name ‘__be16’
+  434 |         __be16 max_tables;
+      |         ^~~~~~
+opal_proto.h:435:9: error: unknown type name ‘__be32’
+  435 |         __be32 max_size_tables;
+      |         ^~~~~~
+opal_proto.h:436:9: error: unknown type name ‘__be32’
+  436 |         __be32 table_size_alignment;
+      |         ^~~~~~
+opal_proto.h:445:9: error: unknown type name ‘__be16’
+  445 |         __be16 baseComID;
+      |         ^~~~~~
+opal_proto.h:446:9: error: unknown type name ‘__be16’
+  446 |         __be16 numComIDs;
+      |         ^~~~~~
+opal_proto.h:451:9: error: unknown type name ‘u8’
+  451 |         u8 range_crossing;
+      |         ^~
+opal_proto.h:458:9: error: unknown type name ‘u8’
+  458 |         u8 num_locking_admin_auth[2];
+      |         ^~
+opal_proto.h:465:9: error: unknown type name ‘u8’
+  465 |         u8 num_locking_user_auth[2];
+      |         ^~
+opal_proto.h:466:9: error: unknown type name ‘u8’
+  466 |         u8 initialPIN;
+      |         ^~
+opal_proto.h:467:9: error: unknown type name ‘u8’
+  467 |         u8 revertedPIN;
+      |         ^~
+opal_proto.h:468:9: error: unknown type name ‘u8’
+  468 |         u8 reserved01;
+      |         ^~
+opal_proto.h:469:9: error: unknown type name ‘__be32’
+  469 |         __be32 reserved02;
+      |         ^~~~~~
+opal_proto.h:474:9: error: unknown type name ‘__be16’
+  474 |         __be16 code;
+      |         ^~~~~~
+opal_proto.h:480:9: error: unknown type name ‘u8’
+  480 |         u8 r_version;
+      |         ^~
+opal_proto.h:481:9: error: unknown type name ‘u8’
+  481 |         u8 length;
+      |         ^~
+opal_proto.h:482:9: error: unknown type name ‘u8’
+  482 |         u8 features[];
+      |         ^~
+opal_core.c:64:9: error: unknown type name ‘size_t’
+   64 |         size_t len;
+      |         ^~~~~~
+opal_core.c:90:9: error: unknown type name ‘sec_send_recv’
+   90 |         sec_send_recv *send_recv;
+      |         ^~~~~~~~~~~~~
+opal_core.c:92:9: error: unknown type name ‘ral_mutex_t’
+   92 |         ral_mutex_t *dev_lock;
+      |         ^~~~~~~~~~~
+opal_core.c:101:9: error: unknown type name ‘size_t’
+  101 |         size_t pos;
+      |         ^~~~~~
+opal_core.c:106:9: error: unknown type name ‘size_t’
+  106 |         size_t prev_d_len;
+      |         ^~~~~~
+opal_core.c:109:26: error: field ‘unlk_lst’ has incomplete type
+  109 |         struct list_head unlk_lst;
+      |                          ^~~~~~~~
+opal_core.c:233:26: error: field ‘node’ has incomplete type
+  233 |         struct list_head node;
+      |                          ^~~~
+opal_core.c: In function ‘opal_error_to_human’:
+opal_core.c:268:22: warning: implicit declaration of function ‘ARRAY_SIZE’ [-Wimplicit-function-declaration]
+  268 |         if (error >= ARRAY_SIZE(opal_errors) || error < 0)
+      |                      ^~~~~~~~~~
+opal_core.c: In function ‘check_tper’:
+opal_core.c:292:17: warning: implicit declaration of function ‘RAL_DEBUG’ [-Wimplicit-function-declaration]
+  292 |                 RAL_DEBUG("TPer sync not supported. flags = %d\n",
+      |                 ^~~~~~~~~
+opal_core.c: In function ‘check_sum’:
+opal_core.c:343:24: warning: implicit declaration of function ‘ral_be32_to_cpu’ [-Wimplicit-function-declaration]
+  343 |         uint32_t nlo = ral_be32_to_cpu(sum->num_locking_objects);
+      |                        ^~~~~~~~~~~~~~~
+opal_core.c: In function ‘get_comid_v100’:
+opal_core.c:359:16: warning: implicit declaration of function ‘ral_be16_to_cpu’ [-Wimplicit-function-declaration]
+  359 |         return ral_be16_to_cpu(v100->baseComID);
+      |                ^~~~~~~~~~~~~~~
+opal_core.c: In function ‘opal_send_cmd’:
+opal_core.c:371:16: error: called object is not a function or function pointer
+  371 |         return dev->send_recv(dev->data, dev->comid, TCG_SECP_01,
+      |                ^~~
+opal_core.c: In function ‘opal_recv_cmd’:
+opal_core.c:378:16: error: called object is not a function or function pointer
+  378 |         return dev->send_recv(dev->data, dev->comid, TCG_SECP_01,
+      |                ^~~
+opal_core.c: In function ‘opal_recv_check’:
+opal_core.c:385:9: error: unknown type name ‘size_t’
+  385 |         size_t buflen = IO_BUFFER_LENGTH;
+      |         ^~~~~~
+opal_core.c:5:1: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+    4 | #include "opal_proto.h"
+  +++ |+#include <stddef.h>
+    5 | // SPDX-License-Identifier: GPL-2.0
+opal_core.c:399:17: warning: implicit declaration of function ‘memset’ [-Wimplicit-function-declaration]
+  399 |                 memset(buffer, 0, buflen);
+      |                 ^~~~~~
+opal_core.c:5:1: note: include ‘<string.h>’ or provide a declaration of ‘memset’
+    4 | #include "opal_proto.h"
+  +++ |+#include <string.h>
+    5 | // SPDX-License-Identifier: GPL-2.0
+opal_core.c:399:17: warning: incompatible implicit declaration of built-in function ‘memset’ [-Wbuiltin-declaration-mismatch]
+  399 |                 memset(buffer, 0, buflen);
+      |                 ^~~~~~
+opal_core.c:399:17: note: include ‘<string.h>’ or provide a declaration of ‘memset’
+opal_core.c: In function ‘check_geometry’:
+opal_core.c:426:22: warning: implicit declaration of function ‘ral_be64_to_cpu’ [-Wimplicit-function-declaration]
+  426 |         dev->align = ral_be64_to_cpu(geo->alignment_granularity);
+      |                      ^~~~~~~~~~~~~~~
+opal_core.c: At top level:
+opal_core.c:433:55: error: unknown type name ‘size_t’
+  433 |                         const struct opal_step *step, size_t stepIndex)
+      |                                                       ^~~~~~
+opal_core.c:433:55: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:447:57: error: unknown type name ‘size_t’
+  447 |                          const struct opal_step *steps, size_t n_steps)
+      |                                                         ^~~~~~
+opal_core.c:447:57: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘opal_discovery0_end’:
+opal_core.c:483:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+  483 |         uint8_t __user *buf_out;
+      |                        ^
+opal_core.c:483:25: error: ‘buf_out’ undeclared (first use in this function)
+  483 |         uint8_t __user *buf_out;
+      |                         ^~~~~~~
+opal_core.c:483:25: note: each undeclared identifier is reported only once for each function it appears in
+opal_core.c:497:25: error: ‘EFAULT’ undeclared (first use in this function)
+  497 |                 return -EFAULT;
+      |                         ^~~~~~
+opal_core.c:501:35: error: expected ‘)’ before ‘__user’
+  501 |                 buf_out = (uint8_t __user *)(uintptr_t)discv_out->data;
+      |                           ~       ^~~~~~~
+      |                                   )
+opal_core.c:502:27: warning: implicit declaration of function ‘min_t’ [-Wimplicit-function-declaration]
+  502 |                 len_out = min_t(uint64_t, discv_out->size, hlen);
+      |                           ^~~~~
+opal_core.c:502:33: error: expected expression before ‘uint64_t’
+  502 |                 len_out = min_t(uint64_t, discv_out->size, hlen);
+      |                                 ^~~~~~~~
+opal_core.c:503:32: warning: implicit declaration of function ‘copy_to_user’ [-Wimplicit-function-declaration]
+  503 |                 if (buf_out && copy_to_user(buf_out, dev->resp, len_out))
+      |                                ^~~~~~~~~~~~
+opal_core.c:567:25: error: ‘EOPNOTSUPP’ undeclared (first use in this function)
+  567 |                 return -EOPNOTSUPP;
+      |                         ^~~~~~~~~~
+opal_core.c: In function ‘opal_discovery0’:
+opal_core.c:588:9: warning: incompatible implicit declaration of built-in function ‘memset’ [-Wbuiltin-declaration-mismatch]
+  588 |         memset(dev->resp, 0, IO_BUFFER_LENGTH);
+      |         ^~~~~~
+opal_core.c:588:9: note: include ‘<string.h>’ or provide a declaration of ‘memset’
+opal_core.c: In function ‘opal_discovery0_step’:
+opal_core.c:600:34: error: ‘NULL’ undeclared (first use in this function)
+  600 |                 opal_discovery0, NULL
+      |                                  ^~~~
+opal_core.c:600:34: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:603:16: warning: implicit declaration of function ‘execute_step’ [-Wimplicit-function-declaration]
+  603 |         return execute_step(dev, &discovery0_step, 0);
+      |                ^~~~~~~~~~~~
+opal_core.c: At top level:
+opal_core.c:606:8: error: unknown type name ‘size_t’
+  606 | static size_t remaining_size(struct opal_dev *cmd)
+      |        ^~~~~~
+opal_core.c:611:53: error: unknown type name ‘size_t’
+  611 | static bool can_add(int *err, struct opal_dev *cmd, size_t len)
+      |                                                     ^~~~~~
+opal_core.c:611:53: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘add_token_u8’:
+opal_core.c:627:14: warning: implicit declaration of function ‘can_add’ [-Wimplicit-function-declaration]
+  627 |         if (!can_add(err, cmd, 1))
+      |              ^~~~~~~
+opal_core.c: In function ‘add_token_u64’:
+opal_core.c:663:9: error: unknown type name ‘size_t’
+  663 |         size_t len;
+      |         ^~~~~~
+opal_core.c:663:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:671:15: warning: implicit declaration of function ‘fls64’ [-Wimplicit-function-declaration]
+  671 |         msb = fls64(number);
+      |               ^~~~~
+opal_core.c:672:15: warning: implicit declaration of function ‘DIV_ROUND_UP’ [-Wimplicit-function-declaration]
+  672 |         len = DIV_ROUND_UP(msb, 8);
+      |               ^~~~~~~~~~~~
+opal_core.c: At top level:
+opal_core.c:683:71: error: unknown type name ‘size_t’
+  683 | static uint8_t *add_bytestring_header(int *err, struct opal_dev *cmd, size_t len)
+      |                                                                       ^~~~~~
+opal_core.c:683:71: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:707:61: error: unknown type name ‘size_t’
+  707 |                                  const uint8_t *bytestring, size_t len)
+      |                                                             ^~~~~~
+opal_core.c:707:61: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:718:49: error: unknown type name ‘size_t’
+  718 | static int build_locking_range(uint8_t *buffer, size_t length, uint8_t lr)
+      |                                                 ^~~~~~
+opal_core.c:718:49: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:736:48: error: unknown type name ‘size_t’
+  736 | static int build_locking_user(uint8_t *buffer, size_t length, uint8_t lr)
+      |                                                ^~~~~~
+opal_core.c:736:48: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘cmd_finalize’:
+opal_core.c:781:25: error: ‘EFAULT’ undeclared (first use in this function)
+  781 |                 return -EFAULT;
+      |                         ^~~~~~
+opal_core.c:786:24: warning: implicit declaration of function ‘ral_cpu_to_be32’ [-Wimplicit-function-declaration]
+  786 |         hdr->pkt.tsn = ral_cpu_to_be32(tsn);
+      |                        ^~~~~~~~~~~~~~~
+opal_core.c:793:33: error: ‘ERANGE’ undeclared (first use in this function)
+  793 |                         return -ERANGE;
+      |                                 ^~~~~~
+opal_core.c: In function ‘response_get_token’:
+opal_core.c:812:24: warning: implicit declaration of function ‘ERR_PTR’ [-Wimplicit-function-declaration]
+  812 |                 return ERR_PTR(-EINVAL);
+      |                        ^~~~~~~
+opal_core.c:812:33: error: ‘EINVAL’ undeclared (first use in this function)
+  812 |                 return ERR_PTR(-EINVAL);
+      |                                 ^~~~~~
+opal_core.c: At top level:
+opal_core.c:830:8: error: unknown type name ‘ssize_t’
+  830 | static ssize_t response_parse_tiny(struct opal_resp_tok *tok,
+      |        ^~~~~~~
+opal_core.c:847:8: error: unknown type name ‘ssize_t’
+  847 | static ssize_t response_parse_short(struct opal_resp_tok *tok,
+      |        ^~~~~~~
+opal_core.c: In function ‘response_parse_short’:
+opal_core.c:860:17: error: unknown type name ‘ssize_t’
+  860 |                 ssize_t i, b = 0;
+      |                 ^~~~~~~
+opal_core.c:865:33: error: ‘EINVAL’ undeclared (first use in this function)
+  865 |                         return -EINVAL;
+      |                                 ^~~~~~
+opal_core.c: At top level:
+opal_core.c:877:8: error: unknown type name ‘ssize_t’
+  877 | static ssize_t response_parse_medium(struct opal_resp_tok *tok,
+      |        ^~~~~~~
+opal_core.c:894:8: error: unknown type name ‘ssize_t’
+  894 | static ssize_t response_parse_long(struct opal_resp_tok *tok,
+      |        ^~~~~~~
+opal_core.c:911:8: error: unknown type name ‘ssize_t’
+  911 | static ssize_t response_parse_token(struct opal_resp_tok *tok,
+      |        ^~~~~~~
+opal_core.c:922:47: error: unknown type name ‘size_t’
+  922 | static int response_parse(const uint8_t *buf, size_t length,
+      |                                               ^~~~~~
+opal_core.c:922:47: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:993:8: error: unknown type name ‘size_t’
+  993 | static size_t response_get_string(const struct parsed_resp *resp, int n,
+      |        ^~~~~~
+opal_core.c: In function ‘response_get_string’:
+opal_core.c:999:18: error: ‘NULL’ undeclared (first use in this function)
+  999 |         *store = NULL;
+      |                  ^~~~
+opal_core.c:999:18: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1001:13: warning: implicit declaration of function ‘IS_ERR’ [-Wimplicit-function-declaration]
+ 1001 |         if (IS_ERR(tok))
+      |             ^~~~~~
+opal_core.c: In function ‘parse_and_check_status’:
+opal_core.c:1089:17: warning: implicit declaration of function ‘response_parse’; did you mean ‘response_status’? [-Wimplicit-function-declaration]
+ 1089 |         error = response_parse(dev->resp, IO_BUFFER_LENGTH, &dev->parsed);
+      |                 ^~~~~~~~~~~~~~
+      |                 response_status
+opal_core.c: In function ‘clear_opal_cmd’:
+opal_core.c:1101:9: warning: incompatible implicit declaration of built-in function ‘memset’ [-Wbuiltin-declaration-mismatch]
+ 1101 |         memset(dev->cmd, 0, IO_BUFFER_LENGTH);
+      |         ^~~~~~
+opal_core.c:1101:9: note: include ‘<string.h>’ or provide a declaration of ‘memset’
+opal_core.c: In function ‘cmd_start’:
+opal_core.c:1112:9: warning: implicit declaration of function ‘add_token_bytestring’ [-Wimplicit-function-declaration]
+ 1112 |         add_token_bytestring(&err, dev, uid, OPAL_UID_LENGTH);
+      |         ^~~~~~~~~~~~~~~~~~~~
+opal_core.c: In function ‘start_opal_session_cont’:
+opal_core.c:1139:25: error: ‘EPERM’ undeclared (first use in this function)
+ 1139 |                 return -EPERM;
+      |                         ^~~~~
+opal_core.c: In function ‘add_suspend_info’:
+opal_core.c:1153:9: warning: implicit declaration of function ‘list_for_each_entry’ [-Wimplicit-function-declaration]
+ 1153 |         list_for_each_entry(iter, &dev->unlk_lst, node) {
+      |         ^~~~~~~~~~~~~~~~~~~
+opal_core.c:1153:51: error: ‘node’ undeclared (first use in this function)
+ 1153 |         list_for_each_entry(iter, &dev->unlk_lst, node) {
+      |                                                   ^~~~
+opal_core.c:1153:56: error: expected ‘;’ before ‘{’ token
+ 1153 |         list_for_each_entry(iter, &dev->unlk_lst, node) {
+      |                                                        ^~
+      |                                                        ;
+opal_core.c: In function ‘generic_get_table_info’:
+opal_core.c:1240:9: warning: implicit declaration of function ‘memcpy’ [-Wimplicit-function-declaration]
+ 1240 |         memcpy(uid, opaluid[OPAL_TABLE_TABLE], half);
+      |         ^~~~~~
+opal_core.c:1240:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c:1240:9: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+opal_core.c:1240:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c: In function ‘gen_key’:
+opal_core.c:1251:9: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+ 1251 |         memcpy(uid, dev->prev_data, min(sizeof(uid), dev->prev_d_len));
+      |         ^~~~~~
+opal_core.c:1251:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c:1251:37: warning: implicit declaration of function ‘min’ [-Wimplicit-function-declaration]
+ 1251 |         memcpy(uid, dev->prev_data, min(sizeof(uid), dev->prev_d_len));
+      |                                     ^~~
+opal_core.c:1252:9: warning: implicit declaration of function ‘ral_free’ [-Wimplicit-function-declaration]
+ 1252 |         ral_free(dev->prev_data);
+      |         ^~~~~~~~
+opal_core.c:1253:26: error: ‘NULL’ undeclared (first use in this function)
+ 1253 |         dev->prev_data = NULL;
+      |                          ^~~~
+opal_core.c:1253:26: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘get_active_key_cont’:
+opal_core.c:1269:9: error: unknown type name ‘size_t’
+ 1269 |         size_t keylen;
+      |         ^~~~~~
+opal_core.c:1269:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1283:26: warning: implicit declaration of function ‘ral_memdup’ [-Wimplicit-function-declaration]
+ 1283 |         dev->prev_data = ral_memdup(activekey, keylen, GFP_KERNEL);
+      |                          ^~~~~~~~~~
+opal_core.c:1283:56: error: ‘GFP_KERNEL’ undeclared (first use in this function)
+ 1283 |         dev->prev_data = ral_memdup(activekey, keylen, GFP_KERNEL);
+      |                                                        ^~~~~~~~~~
+opal_core.c:1286:25: error: ‘ENOMEM’ undeclared (first use in this function)
+ 1286 |                 return -ENOMEM;
+      |                         ^~~~~~
+opal_core.c: In function ‘get_active_key’:
+opal_core.c:1299:15: warning: implicit declaration of function ‘build_locking_range’ [-Wimplicit-function-declaration]
+ 1299 |         err = build_locking_range(uid, sizeof(uid), *lr);
+      |               ^~~~~~~~~~~~~~~~~~~
+opal_core.c: In function ‘generic_table_write_data’:
+opal_core.c:1313:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+ 1313 |         const uint8_t __user *src = (uint8_t __user *)(uintptr_t)data;
+      |                              ^
+opal_core.c:1313:31: error: ‘src’ undeclared (first use in this function)
+ 1313 |         const uint8_t __user *src = (uint8_t __user *)(uintptr_t)data;
+      |                               ^~~
+opal_core.c:1313:45: error: expected ‘)’ before ‘__user’
+ 1313 |         const uint8_t __user *src = (uint8_t __user *)(uintptr_t)data;
+      |                                     ~       ^~~~~~~
+      |                                             )
+opal_core.c:1316:9: error: unknown type name ‘size_t’
+ 1316 |         size_t off = 0;
+      |         ^~~~~~
+opal_core.c:1316:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1330:25: error: ‘ENOSPC’ undeclared (first use in this function)
+ 1330 |                 return -ENOSPC;
+      |                         ^~~~~~
+opal_core.c:1351:28: error: ‘size_t’ undeclared (first use in this function)
+ 1351 |                           (size_t)(size - off));
+      |                            ^~~~~~
+opal_core.c:1351:28: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1354:23: warning: implicit declaration of function ‘add_bytestring_header’ [-Wimplicit-function-declaration]
+ 1354 |                 dst = add_bytestring_header(&err, dev, len);
+      |                       ^~~~~~~~~~~~~~~~~~~~~
+opal_core.c:1354:21: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+ 1354 |                 dst = add_bytestring_header(&err, dev, len);
+      |                     ^
+opal_core.c:1358:21: warning: implicit declaration of function ‘copy_from_user’ [-Wimplicit-function-declaration]
+ 1358 |                 if (copy_from_user(dst, src + off, len)) {
+      |                     ^~~~~~~~~~~~~~
+opal_core.c:1359:32: error: ‘EFAULT’ undeclared (first use in this function)
+ 1359 |                         err = -EFAULT;
+      |                                ^~~~~~
+opal_core.c: In function ‘response_get_column’:
+opal_core.c:1493:24: warning: implicit declaration of function ‘PTR_ERR’ [-Wimplicit-function-declaration]
+ 1493 |                 return PTR_ERR(tok);
+      |                        ^~~~~~~
+opal_core.c: In function ‘locking_range_status’:
+opal_core.c:1551:35: warning: passing argument 4 of ‘response_get_column’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1551 |                                   &lrst->range_start);
+      |                                   ^~~~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   int *
+opal_core.c:1485:42: note: expected ‘uint64_t *’ {aka ‘long unsigned int *’} but argument is of type ‘int *’
+ 1485 |                                uint64_t *value)
+      |                                ~~~~~~~~~~^~~~~
+opal_core.c:1557:35: warning: passing argument 4 of ‘response_get_column’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1557 |                                   &lrst->range_length);
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   int *
+opal_core.c:1485:42: note: expected ‘uint64_t *’ {aka ‘long unsigned int *’} but argument is of type ‘int *’
+ 1485 |                                uint64_t *value)
+      |                                ~~~~~~~~~~^~~~~
+opal_core.c:1599:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 1599 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘start_generic_opal_session’:
+opal_core.c:1614:20: error: ‘NULL’ undeclared (first use in this function)
+ 1614 |         if (key == NULL && auth != OPAL_ANYBODY_UID)
+      |                    ^~~~
+opal_core.c:1614:20: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘start_anybodyASP_opal_session’:
+opal_core.c:1657:61: error: ‘NULL’ undeclared (first use in this function)
+ 1657 |                                           OPAL_ADMINSP_UID, NULL, 0);
+      |                                                             ^~~~
+opal_core.c:1657:61: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘start_SIDASP_opal_session’:
+opal_core.c:1670:54: warning: passing argument 4 of ‘start_generic_opal_session’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1670 |                                                  okey->key,
+      |                                                  ~~~~^~~~~
+      |                                                      |
+      |                                                      const int *
+opal_core.c:1608:51: note: expected ‘const char *’ but argument is of type ‘const int *’
+ 1608 |                                       const char *key,
+      |                                       ~~~~~~~~~~~~^~~
+opal_core.c:1677:34: error: ‘NULL’ undeclared (first use in this function)
+ 1677 |                 dev->prev_data = NULL;
+      |                                  ^~~~
+opal_core.c:1677:34: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘start_admin1LSP_opal_session’:
+opal_core.c:1689:46: warning: passing argument 4 of ‘start_generic_opal_session’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1689 |                                           key->key, key->key_len);
+      |                                           ~~~^~~~~
+      |                                              |
+      |                                              int *
+opal_core.c:1608:51: note: expected ‘const char *’ but argument is of type ‘int *’
+ 1608 |                                       const char *key,
+      |                                       ~~~~~~~~~~~~^~~
+opal_core.c: In function ‘start_PSID_opal_session’:
+opal_core.c:1698:47: warning: passing argument 4 of ‘start_generic_opal_session’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1698 |                                           okey->key,
+      |                                           ~~~~^~~~~
+      |                                               |
+      |                                               const int *
+opal_core.c:1608:51: note: expected ‘const char *’ but argument is of type ‘const int *’
+ 1608 |                                       const char *key,
+      |                                       ~~~~~~~~~~~~^~~
+opal_core.c: In function ‘start_auth_opal_session’:
+opal_core.c:1706:9: error: unknown type name ‘size_t’
+ 1706 |         size_t keylen = session->opal_key.key_len;
+      |         ^~~~~~
+opal_core.c:1706:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1709:24: warning: initialization of ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+ 1709 |         uint8_t *key = session->opal_key.key;
+      |                        ^~~~~~~
+opal_core.c:1713:23: warning: implicit declaration of function ‘build_locking_user’ [-Wimplicit-function-declaration]
+ 1713 |                 err = build_locking_user(lk_ul_user, sizeof(lk_ul_user),
+      |                       ^~~~~~~~~~~~~~~~~~
+opal_core.c:1719:17: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+ 1719 |                 memcpy(lk_ul_user, opaluid[OPAL_ADMIN1_UID], OPAL_UID_LENGTH);
+      |                 ^~~~~~
+opal_core.c:1719:17: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c: In function ‘internal_activate_user’:
+opal_core.c:1768:9: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+ 1768 |         memcpy(uid, opaluid[OPAL_USER1_UID], OPAL_UID_LENGTH);
+      |         ^~~~~~
+opal_core.c:1768:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c: In function ‘erase_locking_range’:
+opal_core.c:1817:25: error: ‘ERANGE’ undeclared (first use in this function)
+ 1817 |                 return -ERANGE;
+      |                         ^~~~~~
+opal_core.c: At top level:
+opal_core.c:1889:41: error: unknown type name ‘size_t’
+ 1889 | static int generic_pw_cmd(uint8_t *key, size_t key_len, uint8_t *cpin_uid,
+      |                                         ^~~~~~
+opal_core.c:1889:41: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘set_new_pw’:
+opal_core.c:1914:9: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+ 1914 |         memcpy(cpin_uid, opaluid[OPAL_C_PIN_ADMIN1], OPAL_UID_LENGTH);
+      |         ^~~~~~
+opal_core.c:1914:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c:1924:13: warning: implicit declaration of function ‘generic_pw_cmd’ [-Wimplicit-function-declaration]
+ 1924 |         if (generic_pw_cmd(usr->opal_key.key, usr->opal_key.key_len,
+      |             ^~~~~~~~~~~~~~
+opal_core.c:1927:25: error: ‘ERANGE’ undeclared (first use in this function)
+ 1927 |                 return -ERANGE;
+      |                         ^~~~~~
+opal_core.c: In function ‘set_sid_cpin_pin’:
+opal_core.c:1938:9: warning: incompatible implicit declaration of built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+ 1938 |         memcpy(cpin_uid, opaluid[OPAL_C_PIN_SID], OPAL_UID_LENGTH);
+      |         ^~~~~~
+opal_core.c:1938:9: note: include ‘<string.h>’ or provide a declaration of ‘memcpy’
+opal_core.c:1942:25: error: ‘ERANGE’ undeclared (first use in this function)
+ 1942 |                 return -ERANGE;
+      |                         ^~~~~~
+opal_core.c: At top level:
+opal_core.c:1950:38: error: unknown type name ‘size_t’
+ 1950 |                                      size_t uid_len)
+      |                                      ^~~~~~
+opal_core.c:1950:38: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:1975:31: error: unknown type name ‘size_t’
+ 1975 |                               size_t users_len)
+      |                               ^~~~~~
+opal_core.c:1975:31: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘add_user_to_lr’:
+opal_core.c:2033:15: warning: implicit declaration of function ‘set_lr_boolean_ace’ [-Wimplicit-function-declaration]
+ 2033 |         err = set_lr_boolean_ace(dev,
+      |               ^~~~~~~~~~~~~~~~~~
+opal_core.c: In function ‘lock_unlock_locking_range’:
+opal_core.c:2077:25: error: ‘ERANGE’ undeclared (first use in this function)
+ 2077 |                 return -ERANGE;
+      |                         ^~~~~~
+opal_core.c: In function ‘lock_unlock_locking_range_sum’:
+opal_core.c:2136:25: error: ‘ERANGE’ undeclared (first use in this function)
+ 2136 |                 return -ERANGE;
+      |                         ^~~~~~
+opal_core.c: In function ‘get_lsp_lifecycle’:
+opal_core.c:2217:25: error: ‘ENODEV’ undeclared (first use in this function)
+ 2217 |                 return -ENODEV;
+      |                         ^~~~~~
+opal_core.c: In function ‘get_msid_cpin_pin’:
+opal_core.c:2226:9: error: unknown type name ‘size_t’
+ 2226 |         size_t strlen;
+      |         ^~~~~~
+opal_core.c:2226:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:2239:55: error: ‘GFP_KERNEL’ undeclared (first use in this function)
+ 2239 |         dev->prev_data = ral_memdup(msid_pin, strlen, GFP_KERNEL);
+      |                                                       ^~~~~~~~~~
+opal_core.c:2241:25: error: ‘ENOMEM’ undeclared (first use in this function)
+ 2241 |                 return -ENOMEM;
+      |                         ^~~~~~
+opal_core.c: In function ‘write_table_data’:
+opal_core.c:2253:67: warning: passing argument 5 of ‘generic_table_write_data’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 2253 |                                         write_tbl->size, write_tbl->table_uid);
+      |                                                          ~~~~~~~~~^~~~~~~~~~~
+      |                                                                   |
+      |                                                                   const int *
+opal_core.c:1311:84: note: expected ‘const uint8_t *’ {aka ‘const unsigned char *’} but argument is of type ‘const int *’
+ 1311 |                                     uint64_t offset, uint64_t size, const uint8_t *uid)
+      |                                                                     ~~~~~~~~~~~~~~~^~~
+opal_core.c: In function ‘read_table_data’:
+opal_core.c:2288:9: error: unknown type name ‘size_t’
+ 2288 |         size_t off = 0, max_read_size = OPAL_MAX_READ_TABLE;
+      |         ^~~~~~
+opal_core.c:2288:9: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:2291:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+ 2291 |         uint8_t __user *dst;
+      |                        ^
+opal_core.c:2291:25: error: ‘dst’ undeclared (first use in this function)
+ 2291 |         uint8_t __user *dst;
+      |                         ^~~
+opal_core.c:2293:51: warning: passing argument 2 of ‘generic_get_table_info’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 2293 |         err = generic_get_table_info(dev, read_tbl->table_uid, OPAL_TABLE_ROWS);
+      |                                           ~~~~~~~~^~~~~~~~~~~
+      |                                                   |
+      |                                                   const int *
+opal_core.c:1228:72: note: expected ‘const uint8_t *’ {aka ‘const unsigned char *’} but argument is of type ‘const int *’
+ 1228 | static int generic_get_table_info(struct opal_dev *dev, const uint8_t *table_uid,
+      |                                                         ~~~~~~~~~~~~~~~^~~~~~~~~
+opal_core.c:2305:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2305 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c:2309:46: warning: passing argument 2 of ‘cmd_start’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 2309 |                 err = cmd_start(dev, read_tbl->table_uid, opalmethod[OPAL_GET]);
+      |                                      ~~~~~~~~^~~~~~~~~~~
+      |                                              |
+      |                                              const int *
+opal_core.c:1104:59: note: expected ‘const uint8_t *’ {aka ‘const unsigned char *’} but argument is of type ‘const int *’
+ 1104 | static int cmd_start(struct opal_dev *dev, const uint8_t *uid, const uint8_t *method)
+      |                                            ~~~~~~~~~~~~~~~^~~
+opal_core.c:2320:43: error: ‘size_t’ undeclared (first use in this function)
+ 2320 |                 len = min(max_read_size, (size_t)(read_size - off));
+      |                                           ^~~~~~
+opal_core.c:2320:43: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c:2337:32: error: ‘EOVERFLOW’ undeclared (first use in this function)
+ 2337 |                         err = -EOVERFLOW;
+      |                                ^~~~~~~~~
+opal_core.c:2341:31: error: expected ‘)’ before ‘__user’
+ 2341 |                 dst = (uint8_t __user *)(uintptr_t)read_tbl->data;
+      |                       ~       ^~~~~~~
+      |                               )
+opal_core.c:2344:32: error: ‘EFAULT’ undeclared (first use in this function)
+ 2344 |                         err = -EFAULT;
+      |                                ^~~~~~
+opal_core.c:2347:34: error: ‘NULL’ undeclared (first use in this function)
+ 2347 |                 dev->prev_data = NULL;
+      |                                  ^~~~
+opal_core.c:2347:34: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘setup_opal_dev’:
+opal_core.c:2382:26: error: ‘NULL’ undeclared (first use in this function)
+ 2382 |         dev->prev_data = NULL;
+      |                          ^~~~
+opal_core.c:2382:26: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+opal_core.c: In function ‘check_opal_support’:
+opal_core.c:2389:9: warning: implicit declaration of function ‘ral_mutex_lock’ [-Wimplicit-function-declaration]
+ 2389 |         ral_mutex_lock(dev->dev_lock);
+      |         ^~~~~~~~~~~~~~
+opal_core.c:2394:9: warning: implicit declaration of function ‘ral_mutex_unlock’ [-Wimplicit-function-declaration]
+ 2394 |         ral_mutex_unlock(dev->dev_lock);
+      |         ^~~~~~~~~~~~~~~~
+opal_core.c: At top level:
+opal_core.c:2411:1: warning: data definition has no type or storage class
+ 2411 | EXPORT_SYMBOL(free_opal_dev);
+      | ^~~~~~~~~~~~~
+opal_core.c:2411:1: warning: type defaults to ‘int’ in declaration of ‘EXPORT_SYMBOL’ [-Wimplicit-int]
+opal_core.c:2411:1: warning: parameter names (without types) in function declaration
+opal_core.c:2413:44: error: unknown type name ‘sec_send_recv’
+ 2413 | struct opal_dev *init_opal_dev(void *data, sec_send_recv *send_recv)
+      |                                            ^~~~~~~~~~~~~
+opal_core.c:2456:1: warning: data definition has no type or storage class
+ 2456 | EXPORT_SYMBOL(init_opal_dev);
+      | ^~~~~~~~~~~~~
+opal_core.c:2456:1: warning: type defaults to ‘int’ in declaration of ‘EXPORT_SYMBOL’ [-Wimplicit-int]
+opal_core.c:2456:1: warning: parameter names (without types) in function declaration
+opal_core.c: In function ‘opal_secure_erase_locking_range’:
+opal_core.c:2474:15: warning: implicit declaration of function ‘execute_steps’ [-Wimplicit-function-declaration]
+ 2474 |         ret = execute_steps(dev, erase_steps, ARRAY_SIZE(erase_steps));
+      |               ^~~~~~~~~~~~~
+opal_core.c: In function ‘opal_enable_disable_shadow_mbr’:
+opal_core.c:2555:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2555 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_set_mbr_done’:
+opal_core.c:2583:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2583 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_save’:
+opal_core.c:2624:19: warning: implicit declaration of function ‘kzalloc_obj’ [-Wimplicit-function-declaration]
+ 2624 |         suspend = kzalloc_obj(*suspend);
+      |                   ^~~~~~~~~~~
+opal_core.c:2624:17: warning: assignment to ‘struct opal_suspend_data *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+ 2624 |         suspend = kzalloc_obj(*suspend);
+      |                 ^
+opal_core.c:2626:25: error: ‘ENOMEM’ undeclared (first use in this function)
+ 2626 |                 return -ENOMEM;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_add_user_to_lr’:
+opal_core.c:2653:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2653 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_lock_unlock’:
+opal_core.c:2760:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2760 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_take_ownership’:
+opal_core.c:2785:25: error: ‘ENODEV’ undeclared (first use in this function)
+ 2785 |                 return -ENODEV;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_activate_lsp’:
+opal_core.c:2811:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2811 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: At top level:
+opal_core.c:2847:39: error: expected ‘;’, ‘,’ or ‘)’ before ‘*’ token
+ 2847 |                           void __user *data)
+      |                                       ^
+opal_core.c: In function ‘opal_set_new_pw’:
+opal_core.c:2883:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2883 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c:2894:21: error: ‘EOPNOTSUPP’ undeclared (first use in this function)
+ 2894 |         if (ret != -EOPNOTSUPP)
+      |                     ^~~~~~~~~~
+opal_core.c: In function ‘opal_set_new_sid_pw’:
+opal_core.c:2914:25: error: ‘ENODEV’ undeclared (first use in this function)
+ 2914 |                 return -ENODEV;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_activate_user’:
+opal_core.c:2938:25: error: ‘EINVAL’ undeclared (first use in this function)
+ 2938 |                 return -EINVAL;
+      |                         ^~~~~~
+opal_core.c: In function ‘opal_unlock_from_suspend’:
+opal_core.c:2967:54: error: ‘node’ undeclared (first use in this function)
+ 2967 |         list_for_each_entry(suspend, &dev->unlk_lst, node) {
+      |                                                      ^~~~
+opal_core.c:2967:59: error: expected ‘;’ before ‘{’ token
+ 2967 |         list_for_each_entry(suspend, &dev->unlk_lst, node) {
+      |                                                           ^~
+      |                                                           ;
+opal_core.c:2956:13: warning: unused variable ‘ret’ [-Wunused-variable]
+ 2956 |         int ret;
+      |             ^~~
+opal_core.c: At top level:
+opal_core.c:2989:1: warning: data definition has no type or storage class
+ 2989 | EXPORT_SYMBOL(opal_unlock_from_suspend);
+      | ^~~~~~~~~~~~~
+opal_core.c:2989:1: warning: type defaults to ‘int’ in declaration of ‘EXPORT_SYMBOL’ [-Wimplicit-int]
+opal_core.c:2989:1: warning: parameter names (without types) in function declaration
+opal_core.c: In function ‘opal_generic_read_write_table’:
+opal_core.c:3045:24: error: ‘EINVAL’ undeclared (first use in this function)
+ 3045 |                 ret = -EINVAL;
+      |                        ^~~~~~
+opal_core.c: At top level:
+opal_core.c:3054:55: error: expected ‘;’, ‘,’ or ‘)’ before ‘*’ token
+ 3054 | int opal_get_status(struct opal_dev *dev, void __user *data)
+      |                                                       ^
+opal_core.c:3071:57: error: expected ‘;’, ‘,’ or ‘)’ before ‘*’ token
+ 3071 | int opal_get_geometry(struct opal_dev *dev, void __user *data)
+      |                                                         ^
+opal_core.c: In function ‘opal_send_cmd’:
+opal_core.c:374:1: warning: control reaches end of non-void function [-Wreturn-type]
+  374 | }
+      | ^
+opal_core.c: In function ‘opal_recv_cmd’:
+opal_core.c:381:1: warning: control reaches end of non-void function [-Wreturn-type]
+  381 | }
+      | ^
+opal_core.c: In function ‘start_anybodyASP_opal_session’:
+opal_core.c:1658:1: warning: control reaches end of non-void function [-Wreturn-type]
+ 1658 | }
+      | ^
+opal_core.c: At top level:
+opal_core.c:40:20: warning: ‘sed_opal_keyring’ defined but not used [-Wunused-variable]
+   40 | static struct key *sed_opal_keyring;
+      |                    ^~~~~~~~~~~~~~~~
+make: *** [Makefile:10: opal_core.o] Error 1
